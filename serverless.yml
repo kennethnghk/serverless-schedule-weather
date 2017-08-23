@@ -1,0 +1,21 @@
+service: serverless-schedule-weather
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  environment:
+    RECIPIENT: ${file(./config.json):receipent}
+    DARK_SKY_API_KEY: ${file(./config.json):darkSkyApiKey}
+    SES_SENDER: ${file(./config.json):sender}
+    LATITUDE: 40.702637
+    LONGITUDE: -73.989406
+
+functions:
+  weather:
+    handler: handler.run
+    memorySize: 128
+    timeout: 5
+    events:
+        # 10am UTC, daily
+      - schedule: cron(0 0 * * ? *)

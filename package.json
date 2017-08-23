@@ -1,0 +1,11 @@
+{
+  "name": "serverless-schedule-weather",
+  "version": "1.0.0",
+  "description": "Serverless function to get weather info and send to email by cron",
+  "author": "Kenneth Ng <ng.tszcheong@gmail.com>",
+  "dependencies": {
+    "aws-sdk": "^2.102.0",
+    "forecast.io": "0.0.11",
+    "postmark": "^1.3.1"
+  }
+}

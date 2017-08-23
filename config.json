@@ -1,0 +1,8 @@
+{ 
+    "accessKeyId": "", 
+    "secretAccessKey": "", 
+    "region": "us-east-1", 
+    "sender": "",
+    "receipent": "",
+    "darkSkyApiKey": ""
+}
